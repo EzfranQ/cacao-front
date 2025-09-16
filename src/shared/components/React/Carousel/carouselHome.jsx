@@ -71,7 +71,7 @@ export default function ProductCarousel() {
     };
 
     return (
-        <div className="relative w-full mx-auto shadow-2xl rounded-lg overflow-hidden">
+        <div className="relative w-full mx-auto overflow-hidden">
             {/* Contenedor de slides */}
             <div className="relative w-full h-[500px] overflow-hidden">
                 {slidesData.map((slide, index) => {
@@ -107,18 +107,10 @@ export default function ProductCarousel() {
                     resetAutoPlay();
                 }}
                 // 1. Agrega la clase "group" al elemento padre (el botón)
-                className="group absolute top-1/2 left-4 transform -translate-y-1/2 bg-white hover:cursor-pointer hover:bg-[#32adfe] p-3 rounded-full shadow-md transition-all duration-300 z-10"
+                className="group absolute top-1/2 left-4 transform -translate-y-1/2 bg-white hover:cursor-pointer hover:bg-[#32adfe] p-3 h-16 w-8 shadow-md transition-all duration-300 z-10"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    // 2. Cambia el color del texto cuando el "group" esté en estado hover
-                    className="h-6 w-6 text-gray-800 group-hover:text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
-                </svg>
+                <i class="fa-solid fa-arrow-right rotate-180 group-hover:text-white text-[#32adfe] -translate-x-1.5"></i>
+
             </button>
 
             {/* Flecha Derecha */}
@@ -128,18 +120,9 @@ export default function ProductCarousel() {
                     resetAutoPlay();
                 }}
                 // 1. Agrega la clase "group" al elemento padre (el botón)
-                className="group absolute top-1/2 right-4 transform hover:cursor-pointer -translate-y-1/2 bg-white hover:bg-[#32adfe] p-3 rounded-full shadow-md transition-all duration-300 z-10"
+                className="group absolute top-1/2 right-4 transform hover:cursor-pointer -translate-y-1/2 bg-white hover:bg-[#32adfe] p-3 h-16 w-8 shadow-md transition-all duration-300 z-10"
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    // 2. Cambia el color del texto cuando el "group" esté en estado hover
-                    className="h-6 w-6 text-gray-800 group-hover:text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
+<i class="fa-solid fa-arrow-right group-hover:text-white text-[#32adfe] -translate-x-1.5"></i>
             </button>
 
             {/* Indicadores */}

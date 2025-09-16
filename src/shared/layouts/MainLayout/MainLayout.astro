@@ -2,7 +2,10 @@
 import Header from "../../components/Astro/Header.astro";
 import Footer from "../../components/Astro/Footer.astro";
 import ProductCarousel from "../../components/React/Carousel/carouselHome.jsx";
-import CategoryHome from "../../components/React/Products/categoryHome.jsx"
+import CategoryHome from "../../components/React/Products/categoryHome.jsx";
+import CarouselProductsHome from "../../components/React/Carousel/carouselProductsHome.jsx";
+
+
 const { title = "Mi Sitio", description = "Descripción del sitio" } =
     Astro.props;
 ---
@@ -38,10 +41,12 @@ const { title = "Mi Sitio", description = "Descripción del sitio" } =
     </head>
     <body class="min-h-screen flex flex-col">
         <Header />
-        <div class="flex-1">
-            <ProductCarousel client:load />
+        <ProductCarousel client:load />
+        <div class="flex-1 container mx-auto px-4 py-8 sm:px-6 lg:px-8 space-y-12">
             <CategoryHome client:load />
+            <CarouselProductsHome client:load />
         </div>
+        
         <Footer />
     </body>
 </html>
