@@ -4,7 +4,7 @@ import Footer from "../../components/Astro/Footer.astro";
 import ProductCarousel from "../../components/React/Carousel/carouselHome.jsx";
 import CategoryHome from "../../components/React/Products/categoryHome.jsx";
 import CarouselProductsHome from "../../components/React/Carousel/carouselProductsHome.jsx";
-
+import NewProducts from '../../components/React/Products/newProducts.jsx'
 
 const { title = "Mi Sitio", description = "Descripción del sitio" } =
     Astro.props;
@@ -45,6 +45,8 @@ const { title = "Mi Sitio", description = "Descripción del sitio" } =
         <div class="flex-1 container mx-auto px-4 py-8 sm:px-6 lg:px-8 space-y-12">
             <CategoryHome client:load />
             <CarouselProductsHome client:load />
+            <NewProducts client:load />
+            <img src="https://www.ledstar.com.uy/imgs/productos_categorias_home/imagen35_2.jpg" class="w-full rounded-lg" alt="">
         </div>
         
         <Footer />
