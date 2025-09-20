@@ -1,10 +1,23 @@
 ---
-import Layout from '../shared/layouts/MainLayout/MainLayout.astro';
-import "../app/styles/global.css";
+import Layout from "../shared/layouts/Layout.astro";
+import CarouselProductsHome from "../shared/components/React/Carousel/carouselProductsHome.jsx";
+import ProductCarousel from "../shared/components/React/Carousel/carouselHome.jsx";
+import CategoryHome from "../shared/components/React/Products/categoryHome.jsx";
+import NewProducts from "../shared/components/React/Products/newProducts.jsx";
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="THOT 15 - Tu Tienda de Tecnología">
-  
+<Layout>
+	<ProductCarousel client:load />
+	<CategoryHome client:load />
+	<NewProducts client:load />
+	<CarouselProductsHome client:load />
+	<img
+	src="https://www.ledstar.com.uy/imgs/productos_categorias_home/imagen35_2.jpg"
+	class="w-full rounded-lg"
+	alt=""
+	/>
+	
 </Layout>
