@@ -3,8 +3,21 @@ import Header from "../components/React/Navigation/Header.astro";
 import Footer from "../components/Astro/Footer.astro";
 import { ClientRouter, fade, slide} from "astro:transitions";
 
+
+
+let duration = '0.25s';
+
+if (typeof window !== 'undefined') {
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    duration = '0.25s'; // para pantallas grandes
+  } else {
+    duration = '0.2s'; // para pantallas pequeñas
+  }
+}
+
 const { title = "Mi Sitio", description = "Descripción del sitio" } =
   Astro.props;
+
 ---
 
 <html lang="es">
